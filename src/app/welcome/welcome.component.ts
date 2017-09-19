@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { Modal, BSModalContext } from 'angular2-modal/plugins/bootstrap';
+import { LoginComponent } from './login/login.component' 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomeComponent implements OnInit {
    
    signinflag : boolean = false;
-  constructor() {
+  constructor( ) {
    
    }
 
@@ -18,6 +19,7 @@ export class WelcomeComponent implements OnInit {
   }
   //function for welcome page sign in button click
    opensignin() {
+    // this.modal.open(LoginComponent);
     this. signinflag = true;
     console.log("open sign in");
    }

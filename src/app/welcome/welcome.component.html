@@ -1,24 +1,21 @@
-<body>
   <div id=welcomeimg>
-    <img src="http://scc.etllao.com/photoslice/finan.png" alt="img cannot be displayed" width="1365px" height="660px">
-    <div id=signinbtn> 
-        <button class="btn btn-primary btn-lg" onclick="opensignin()">Sign In</button>
-       <div *ngIf="signinflag">
-          <p>write</p>
-          <div class="modal-dialog model-md">
-            <div class="modal-content">
-               <div class="modal-body">
-                   <app-login></app-login>
-               </div>
-          </div>  
+    <img src="http://scc.etllao.com/photoslice/finan.png" alt="img cannot be displayed" width="1365px" height="660px">  
+    <div *ngIf="signinflag">
+       <div class="modal-dialog model-md" >
+          <div class="modal-body">
+            <app-login></app-login>
           </div>
         </div>
-    </div>
+       </div>
+      <div id=signinbtn> 
+        <button class="btn btn-primary btn-lg" (click)="opensignin()">Sign In</button>
+     </div>
 </div>
-</body>
-<!--net 1 not used<button type="button" (click)="openModel()">Open Modal</button>
 
+
+<!--net 1 not used<button type="button" (click)="openModel()">Open Modal</button>
 <div #myModel class="modal fade">
+
   <div class="modal-dialog">
     <div class="modal-content">
      <div class="modal-header">
